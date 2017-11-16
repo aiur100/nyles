@@ -1,7 +1,7 @@
 # Nyles - An Assistant for The More Tech-Savy User
 
-**Author** Christopher R. Hill 
-**Contact** chrishill9 [ AT ] gmail [ the dot ] com
+**Author:** Christopher R. Hill 
+**Contact:** chrishill9 [ AT ] gmail [ the dot ] com
 
 ## Overview 
 This is just a fun experiment with creating an assistant that would run on 
