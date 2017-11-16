@@ -22,6 +22,6 @@ search for twitter updates for usernames.
 	- Additionally, this uses Google Cloud Speech API, in order to have that working, you will need to put your 
 		Google Cloud Speech API generated credentials JSON file in the ```keys/my-google-cloud-speech-credentials.json```.  
 		That file doesn't exist, but you will need to create it and put the credentials generated.  
-		**FOLLOW THE GETTING STARTED INSTRUCTIONS, SETUP A PROJECT, AND SAVE THAT JSON FILE AS THE FILE NAME LISTED IN THIS README**    
+		**FOLLOW THE GETTING STARTED INSTRUCTIONS IN THIS LINK, SETUP A PROJECT, AND SAVE THAT JSON FILE AS THE FILE NAME LISTED IN THIS README**: https://cloud.google.com/speech/docs/getting-started    
 
 
