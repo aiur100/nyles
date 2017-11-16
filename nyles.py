@@ -30,8 +30,8 @@ def parseAudio(audio):
 while True:
 	r = sr.Recognizer()
 	with sr.Microphone() as source:
-	    print("Say something!")
-	    audio = r.listen(source)
+		r.adjust_for_ambient_noise(source)
+		audio = r.listen(source)
 	
 	whatWasSaid = parseAudio(audio)
 	nyles.query(whatWasSaid)	   

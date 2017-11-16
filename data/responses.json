@@ -1,0 +1,19 @@
+{
+	"queries":
+	{
+		"hello":"greeting",
+		"how are you":"personal status",
+		"what's up?":"personal status",
+		"what is my name":"master name",
+		"hi":"greeting",
+		"hola":"greeting",
+		"weather":"weather data"
+	},
+	"responses":
+	{
+		"greeting": ["hey there","hi!","hello!","How's it hanging?","hola","howdy!","Oh, hey there"],
+		"personal status": ["I'm the greatest","I'm so great","I'm pretty good!","I love my binary life"],
+		"master name": ["You are (master)"],
+		"weather data": ["The weather seems to be ","The climate is "]
+	}
+}
