@@ -1,7 +1,7 @@
 # Nyles - An Assistant for The More Tech-Savy User
 
-*Author* Christopher R. Hill 
-*Contant* chrishill9 [ AT ] gmail [ the dot ] com
+**Author** Christopher R. Hill 
+**Contact** chrishill9 [ AT ] gmail [ the dot ] com
 
 ## Overview 
 This is just a fun experiment with creating an assistant that would run on 
@@ -17,7 +17,7 @@ search for twitter updates for usernames.
 
 ## Set-up
 * You'll need a DarkSky API Key - https://darksky.net
-	** In the `keys` directory, there is a file called api_keys.json.  You'll need to update this
+	- In the `keys` directory, there is a file called api_keys.json.  You'll need to update this
 	   to include your DarkSky API Key. 
 
 
