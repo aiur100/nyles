@@ -25,6 +25,7 @@ class Assistant:
 		call(["say", message])
 
 	def query(self,question):
+		print(self.response["queries"])
 		if question in self.response["queries"]:
 			print("Using file of responses")
 			respond 	= self.response["queries"][question]
@@ -41,7 +42,11 @@ class Assistant:
 			print("nothing to say")
 		elif "weather" in question:
 			 self.say("The weather is currently "+self.weather.currentSummary())
-			 self.say("Temperature seems to be about "+str(self.weather.currentTemperature())+" degrees")	
+			 self.say("Temperature seems to be about "+str(self.weather.currentTemperature())+" degrees")
+		elif "this is Emma" in question:
+			self.say("Hello Emma!")
+		elif "who is Emma" in question:
+			self.say("My master's wife.  I heard she's quite beautiful")		 	
 		else:
-			self.say("oh, wow, I am not really sure what you mean by, "+question+". My master just made me, so I am learning slowly")	
+			self.say("I don't know what you mean by, "+question)	
 						
