@@ -14,6 +14,8 @@ search for twitter updates for usernames.
 ## Requirements 
 * MacOS
 * Python 3.6
+* Python Speech Recognition 3.7 or greater https://pypi.python.org/pypi/SpeechRecognition/
+	- All subsequent requirements of Python Speech Recognition
 
 ## Set-up
 * You'll need a DarkSky API Key - https://darksky.net
