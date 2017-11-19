@@ -6,14 +6,26 @@
 		"what's up?":"personal status",
 		"what is my name":"master name",
 		"hi":"greeting",
-		"hola":"greeting",
-		"weather":"weather data"
+		"what's the weather":"weather data",
+		"what's it like outside":"weather data",
+		"how is it outside":"weather data",
+		"how are you feeling":"personal status",
+		"tell me a joke":"joke",
+		"tell me something funny":"joke",
+		"say something cute":"joke",
+		"knock knock":"knock knock",
+		"how old am I":"info"
+	},
+	"info-statements":{
+		"my name is (name)":"info",
+		"I am (age) years old":"name",
 	},
 	"responses":
 	{
-		"greeting": ["hey there","hi!","hello!","How's it hanging?","hola","howdy!","Oh, hey there"],
+		"greeting": ["hey there","hi!","hello!","How's it hanging?","hey homie!","howdy!","Oh, hey there"],
 		"personal status": ["I'm the greatest","I'm so great","I'm pretty good!","I love my binary life"],
 		"master name": ["You are (master)"],
-		"weather data": ["The weather seems to be ","The climate is "]
+		"weather data": ["The weather seems to be ","The climate is ", "My magical weather powers say "],
+		"joke": ["A bear walks into a bar and says to the bartender, I'll have a pint of beer and a, , , , , , ,packet of peanuts. The bartender asks, Why the big pause?"]
 	}
 }

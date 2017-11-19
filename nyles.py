@@ -10,6 +10,7 @@ google 	= open("keys/my-google-cloud-speech-credentials.json").read()
 weather = Weather(keys['darkSky'])
 nyles 	= Assistant("Nyles")
 nyles.setWeather(weather)
+nyles.setResponseObject()
 
 #nyles.greeting()
 #nyles.pendingRequestMessage()

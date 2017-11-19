@@ -1,6 +1,8 @@
 from subprocess import call
+from classes.ResponseConstructor	import ResponseConstructor
 import random
 import json
+import re
 
 class Assistant:
 	greetings = ["hello!","howdy","What's up?","hola!","bonjour","hi there","shalom alone, my friend","hey, what's uup!"]
@@ -9,11 +11,12 @@ class Assistant:
 	def __init__(self,name,master = "master"):
 		self.name 	= name
 		self.master = master
-		self.response = open('data/responses.json').read()
-		self.response = json.loads(self.response)
 
 	def setWeather(self,weatherObject):
 		self.weather = weatherObject
+
+	def setResponseObject(self):
+		self.ResponseConstructor = ResponseConstructor(self.weather,self.master)	
 
 	def greeting(self):
 		self.say("Hello "+self.master+", My name is "+self.name)
@@ -22,31 +25,16 @@ class Assistant:
 		self.say("How can I be of service?")		
 
 	def say(self,message):
-		call(["say", message])
+		call(["say", message])	
 
 	def query(self,question):
-		print(self.response["queries"])
-		if question in self.response["queries"]:
-			print("Using file of responses")
-			respond 	= self.response["queries"][question]
-			respond 	= self.response["responses"][respond]
-			response 	= random.choice(respond)
-			self.say(response)
-		elif "hello" in question:
-			self.say(random.choice(self.greetings))
-		elif "hi" in question:
-			self.say(random.choice(self.greetings))	
-		elif "how are you" in question:
-			self.say("I'm always well, thank you!")
-		elif "I could not understand you" in question:
-			print("nothing to say")
-		elif "weather" in question:
-			 self.say("The weather is currently "+self.weather.currentSummary())
-			 self.say("Temperature seems to be about "+str(self.weather.currentTemperature())+" degrees")
-		elif "this is Emma" in question:
-			self.say("Hello Emma!")
-		elif "who is Emma" in question:
-			self.say("My master's wife.  I heard she's quite beautiful")		 	
-		else:
-			self.say("I don't know what you mean by, "+question)	
+		if("computer" not in question):
+			return
+		question = re.sub('(computer)', '', question)	
+		question = question.strip()
+		question = question.lower()
+		print(question)
+		response = self.ResponseConstructor.getResponseToQuestion(question)
+		self.say(response)
+			
 						
