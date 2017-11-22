@@ -33,7 +33,7 @@ class Assistant:
 		question = re.sub('(computer)', '', question)	
 		question = question.strip()
 		question = question.lower()
-		print(question)
+		#print(question)
 		response = self.ResponseConstructor.getResponseToQuestion(question)
 		self.say(response)
 			
