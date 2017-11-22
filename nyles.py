@@ -4,6 +4,7 @@ from classes.weather	import Weather
 import speech_recognition as sr
 import json
 import pyaudio,os
+import hashlib
 
 keys  	= json.loads(open("keys/api_keys.json").read())
 google 	= open("keys/my-google-cloud-speech-credentials.json").read()
@@ -17,6 +18,7 @@ nyles.setResponseObject()
 
 
 def parseAudio(audio): 
+
 	# Speech recognition using Google Speech Recognition
 	try:
 		said = r.recognize_google_cloud(audio,credentials_json=google)

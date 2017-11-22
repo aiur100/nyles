@@ -29,9 +29,22 @@ class ResponseConstructor:
 			if self.similar(possibleQuestion,quesiton) > 0.5:
 				print(possibleQuestion)
 				return self.responses["queries"][possibleQuestion]
-		return False					
+		return False
+
+	def isStoreInfo(self,question):
+		response = False
+		if "my name is" in question:
+			response = re.sub('my name is', "", question)
+			self.master = response
+			response = "Hello, "+response
+
+		return response	
+
 
 	def getResponseToQuestion(self,question):
+		storeInfoCheck = self.isStoreInfo(question)
+		if storeInfoCheck != False:
+			return storeInfoCheck
 		if self.checkKeyValuePairExistence(self.responses["queries"],question) != False:
 			return self.buildResponse(self.responses["queries"][question])
 
