@@ -1,6 +1,7 @@
 import re
 import random
 import json
+from functions.functions import openApp
 from difflib import SequenceMatcher
 
 class ResponseConstructor:
@@ -37,14 +38,27 @@ class ResponseConstructor:
 			response = re.sub('my name is', "", question)
 			self.master = response
 			response = "Hello, "+response
+		return response
 
-		return response	
+	def isOpenAppCommand(self,question):
+		response = False
+		if "open" in question:
+			response = re.sub('open',"",question)
+			response = openApp(response)
+			return response
+		else:
+			return response
 
 
 	def getResponseToQuestion(self,question):
-		storeInfoCheck = self.isStoreInfo(question)
+		storeInfoCheck 	= self.isStoreInfo(question)
 		if storeInfoCheck != False:
 			return storeInfoCheck
+
+		appCheck 		= self.isOpenAppCommand(question)
+		if appCheck != False:
+			return appCheck
+
 		if self.checkKeyValuePairExistence(self.responses["queries"],question) != False:
 			return self.buildResponse(self.responses["queries"][question])
 

@@ -1,4 +1,3 @@
-from subprocess 		import call
 from classes.assistant	import Assistant
 from classes.weather	import Weather
 import speech_recognition as sr
@@ -24,9 +23,9 @@ def parseAudio(audio):
 		said = r.recognize_google_cloud(audio,credentials_json=google)
 		return str(said)
 	except sr.UnknownValueError:
-	    return "I could not understand you"
+		return "I could not understand you"
 	except sr.RequestError as e:
-	    return "There was a problem with my brain. The problem is "+format(e)
+		return "There was a problem with my brain. The problem is "+format(e)
 
 
 

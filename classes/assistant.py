@@ -1,7 +1,5 @@
 from subprocess import call
 from classes.ResponseConstructor	import ResponseConstructor
-import random
-import json
 import re
 
 class Assistant:
