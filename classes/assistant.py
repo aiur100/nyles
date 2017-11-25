@@ -1,5 +1,6 @@
 from subprocess import call
 from classes.ResponseConstructor	import ResponseConstructor
+from functions.functions import *
 import re
 
 class Assistant:
@@ -33,6 +34,10 @@ class Assistant:
 		question = question.lower()
 		#print(question)
 		response = self.ResponseConstructor.getResponseToQuestion(question)
+		# Calling the function
+		notify(title=self.name,
+			   subtitle='Query: '+question,
+			   message=response)
 		self.say(response)
 			
 						

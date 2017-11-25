@@ -14,14 +14,16 @@
 		"tell me something funny":"joke",
 		"say something cute":"joke",
 		"knock knock":"knock knock",
-		"how old am I":"info"
+		"how old am I":"info",
+        "what's the weather like this week":"weather week"
 	},
 	"responses":
 	{
 		"greeting": ["hey there","hi!","hello!","How's it hanging?","hey homie!","howdy!","Oh, hey there"],
 		"personal status": ["I'm the greatest","I'm so great","I'm pretty good!","I love my binary life"],
 		"master name": ["You are (master)"],
-		"weather data": ["The weather seems to be ","The climate is ", "My magical weather powers say "],
+		"weather data": ["The weather seems to be ","The climate is ", "My magical weather powers say ","The forecast for today is "],
+        "weather week": ["The forecast for this week is "],
 		"joke": ["A bear walks into a bar and says to the bartender, I'll have a pint of beer and a, , , , , , ,packet of peanuts. The bartender asks, Why the big pause?"]
 	}
 }

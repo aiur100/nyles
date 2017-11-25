@@ -34,6 +34,10 @@ class Weather:
 		return self.getCurrentlyData()['temperature']
 
 	def dailySummary(self):
+		"""
+
+		:rtype: object
+		"""
 		return self.getDailyData()['summary']		
 		
 
